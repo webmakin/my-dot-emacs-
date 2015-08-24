@@ -1,0 +1,34 @@
+ll
+ls
+ls -al
+alais
+alias
+top
+ls
+mkdir test_from_eshell
+ls
+rm test_from_eshell/
+rm -rf test_from_eshell
+ls
+ff
+sudo su
+cd ..
+cd ..
+cd sports-microsite-desktop/
+grunt server
+chmod 777 -R runtime
+cd runtime/
+chown www-data:www-data application.log 
+sudo chown www-data:www-data application.log
+ll
+ls
+cd ..
+ls
+ll
+ls
+ls -a
+ls -al
+sudo chmod 777 -R _compiled/
+ls -al
+composer update
+composer install

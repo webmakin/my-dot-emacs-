@@ -1,0 +1,183 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Fri Aug 21 20:18:22 2015
+;; Desktop file format version 206
+;; Emacs version 24.3.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("as" "youtube" "aurgro" "twitter" "indent" "author" "w3m" "trim" "email" "w3m" ">>>>>" "sec" "k" "unesca" "user_id" "fethc"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/home/asif/workspace/videos/.git/COMMIT_EDITMSG" "~/workspace/videos/" "/home/asif/workspace/api/.git/COMMIT_EDITMSG" "~/workspace/api/" "/home/asif/workspace/videos/.git/COMMIT_EDITMSG" "~/workspace/videos/" "~/workspace/api/" "~/Downloads/" "~/workspace/api/" "~/.emacs" "~/workspace/api/" "/home/asif/workspace/videos/.git/COMMIT_EDITMSG" "~/workspace/videos/" "/home/asif/workspace/videos/.git/COMMIT_EDITMSG" "/home/asif/workspace/api/.git/COMMIT_EDITMSG" "~/workspace/api/" "/home/asif/workspace/videos/.git/COMMIT_EDITMSG" "~/workspace/writers/" "/home/asif/workspace/videos/.git/COMMIT_EDITMSG" "~/workspace/api/" "~/workspace/videos/" "/home/asif/workspace/nginx/.git/COMMIT_EDITMSG" "~/workspace/nginx/" "~/workspace/api/" "~/workspace/videos/" "/home/asif/workspace/videos/.git/COMMIT_EDITMSG" "~/workspace/videos/" "~/workspace/api" "/home/asif/workspace/videos/.git/COMMIT_EDITMSG" "~/workspace/videos/templates/desktop/"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/home/asif/workspace/videos/routes/admin.php"
+  "admin.php"
+  'php-mode
+  '(abbrev-mode auto-complete-mode global-auto-revert-mode magit-auto-revert-mode)
+  749
+  '(147 nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  nil
+  "routes"
+  'dired-mode
+  '(global-auto-revert-mode magit-auto-revert-mode)
+  221
+  '(nil nil)
+  t
+  '("/home/asif/workspace/videos/routes/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "videos"
+  'dired-mode
+  '(global-auto-revert-mode magit-auto-revert-mode)
+  1439
+  '(nil nil)
+  t
+  '("/home/asif/workspace/videos/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "templates"
+  'dired-mode
+  '(global-auto-revert-mode magit-auto-revert-mode)
+  178
+  '(nil nil)
+  t
+  '("/home/asif/workspace/videos/templates/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "desktop"
+  'dired-mode
+  '(global-auto-revert-mode magit-auto-revert-mode)
+  189
+  '(nil nil)
+  t
+  '("/home/asif/workspace/videos/templates/desktop/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/asif/workspace/videos/functions.php"
+  "functions.php"
+  'php-mode
+  '(abbrev-mode auto-complete-mode global-auto-revert-mode magit-auto-revert-mode)
+  928
+  '(928 nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  "/home/asif/workspace/api/sk/v1/author.php"
+  "author.php"
+  'php-mode
+  '(abbrev-mode auto-complete-mode global-auto-revert-mode magit-auto-revert-mode)
+  4931
+  '(nil nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  nil
+  "v1"
+  'dired-mode
+  '(global-auto-revert-mode magit-auto-revert-mode)
+  273
+  '(nil nil)
+  t
+  '("/home/asif/workspace/api/sk/v1/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "sk"
+  'dired-mode
+  '(global-auto-revert-mode magit-auto-revert-mode)
+  796
+  '(nil nil)
+  t
+  '("/home/asif/workspace/api/sk/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "v2"
+  'dired-mode
+  '(global-auto-revert-mode magit-auto-revert-mode)
+  176
+  '(nil nil)
+  t
+  '("/home/asif/workspace/api/sk/v2/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/asif/workspace/api/sk/v2/video.php"
+  "video.php"
+  'php-mode
+  '(abbrev-mode auto-complete-mode global-auto-revert-mode magit-auto-revert-mode)
+  7158
+  '(nil nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  nil
+  "api"
+  'dired-mode
+  '(global-auto-revert-mode magit-auto-revert-mode)
+  926
+  '(nil nil)
+  t
+  '("/home/asif/workspace/api/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "admin"
+  'dired-mode
+  '(global-auto-revert-mode magit-auto-revert-mode)
+  184
+  '(nil nil)
+  t
+  '("/home/asif/workspace/videos/templates/admin/")
+  nil)
+
+(desktop-create-buffer 206
+  "/home/asif/workspace/videos/templates/desktop/login.tpl"
+  "login.tpl"
+  'web-mode
+  '(auto-complete-mode global-auto-revert-mode magit-auto-revert-mode)
+  5172
+  '(5410 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "/home/asif/workspace/api/sk/v2/api.php"
+  "api.php"
+  'php-mode
+  '(abbrev-mode auto-complete-mode global-auto-revert-mode magit-auto-revert-mode)
+  6138
+  '(nil nil)
+  nil
+  nil
+  '((show-trailing-whitespace) (tab-width . 4) (indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (case-fold-search . t)))
+
