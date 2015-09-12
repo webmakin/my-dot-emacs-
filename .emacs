@@ -301,3 +301,11 @@ You can redefine this if you want the mouse banished to a different corner."
 (fset 'remove_blank_lines
    [?\C-x ?h ?\M-x ?f ?l ?u ?s ?h tab return ?^ ?$ return])
 (global-set-key (kbd "C-c F") 'remove_blank_lines)
+
+;;set the indentation correctly
+(require 'web-mode)
+(defun my-web-mode-hook ()
+  "Hooks for Web mode."
+  (setq web-mode-markup-indent-offset 2)
+)
+(add-hook 'web-mode-hook  'my-web-mode-hook)
