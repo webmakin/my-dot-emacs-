@@ -288,32 +288,30 @@
       'wl-draft-kill
       'mail-send-hook))
 
-;;indentation
-;; (defun my-setup-php ()
-;;   ;; enable web mode
-;;   (web-mode)
-
-;;   ;; make these variables local
-;;   (make-local-variable 'web-mode-code-indent-offset)
-;;   (make-local-variable 'web-mode-markup-indent-offset)
-;;   (make-local-variable 'web-mode-css-indent-offset)
-
-;;   ;; set indentation, can set different indentation level for different code type
-;;   (setq web-mode-code-indent-offset 4)
-;;   (setq web-mode-css-indent-offset 2)
-;;   (setq web-mode-markup-indent-offset 2))
-;;   (setq web-mode-ac-sources-alist
-;;       '(("css" . (ac-source-words-in-buffer ac-source-css-property))
-;;         ("html" . (ac-source-words-in-buffer ac-source-abbrev))
-;;         ("php" . (ac-source-words-in-buffer
-;;                   ac-source-words-in-same-mode-buffers
-;;                   ac-source-dictionary))))
-
-;; (add-to-list 'auto-mode-alist '("\\.php$" . my-setup-php))
-;; (setq w3m-confirm-leaving-secure-page nil)
-
 ;;make indenting use space instead of tabs
 (setq-default indent-tabs-mode nil)
 
 ;;use twitter master password instead of token
 (setq twittering-use-master-password t)
+
+;;mouse avoidance
+(mouse-avoidance-mode 1)
+(defun mouse-avoidance-banish-destination ()
+  "The position to which Mouse-Avoidance mode `banish' moves the mouse.
+You can redefine this if you want the mouse banished to a different corner."
+  (let* ((pos (window-edges)))
+    (cons (- (nth 2 pos) 2)
+	  (+ (nth 1 pos) 1))))
+
+;;remove blank lines
+(fset 'remove_blank_lines
+   [?\C-x ?h ?\M-x ?f ?l ?u ?s ?h tab return ?^ ?$ return])
+(global-set-key (kbd "C-c F") 'remove_blank_lines)
+
+;;set the indentation correctly
+(require 'web-mode)
+(defun my-web-mode-hook ()
+  "Hooks for Web mode."
+  (setq web-mode-markup-indent-offset 2)
+)
+(add-hook 'web-mode-hook  'my-web-mode-hook)
