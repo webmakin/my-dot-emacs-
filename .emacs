@@ -314,3 +314,6 @@
 
 ;;make indenting use space instead of tabs
 (setq-default indent-tabs-mode nil)
+
+;;use twitter master password instead of token
+(setq twittering-use-master-password t)
