@@ -1,6 +1,6 @@
-(add-to-list 'load-path "/home/asif/Downloads/php-mode-1.13.1")
+;;(add-to-list 'load-path "/home/asif/Downloads/php-mode-1.13.1")
 (add-to-list 'load-path "/home/asif/.emacs.d")
-(add-to-list 'load-path "/home/asif/mu/mu4e")
+;;(add-to-list 'load-path "/home/asif/mu/mu4e")
 
 ;;for adding melpa packages
 (require 'package) ;; You might already have this line
@@ -13,22 +13,6 @@
 
 ;;smarty-mode
 (require 'smarty-mode)
-
-;;phpmode
-(require 'php-mode)
-;; To use abbrev-mode, add lines like this:
-(add-hook 'php-mode-hook
-'(lambda () (define-abbrev php-mode-abbrev-table "ex" "extends")))
-;; (defun clean-php-mode ()
-;; (interactive)
-;; (php-mode)
-;; (setq c-basic-offset 2) ; 2 tabs indenting
-;; (setq indent-tabs-mode nil)
-;; (setq fill-column 78)
-;; (c-set-offset 'case-label '+)
-;; (c-set-offset 'arglist-close 'c-lineup-arglist-operators))
-;; (c-set-offset 'arglist-intro '+) ; for FAPI arrays and DBTNG
-;; (c-set-offset 'arglist-cont-nonempty 'c-lineup-math) ; for DBTNG fields and values
 
 ;;tree-mode
 (require 'tree-mode)
@@ -198,13 +182,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-names-vector ["#2d3743" "#ff4242" "#74af68" "#dbdb95" "#34cae2" "#008b8b" "#00ede1" "#e1e1e0"])
- '(custom-enabled-themes (quote (tsdh-light)))
- '(custom-safe-themes (quote ("6a9606327ecca6e772fba6ef46137d129e6d1888dcfc65d0b9b27a7a00a4af20" default)))
- '(fci-rule-color "#383838")
- '(vc-annotate-background "#2B2B2B")
- '(vc-annotate-color-map (quote ((20 . "#BC8383") (40 . "#CC9393") (60 . "#DFAF8F") (80 . "#D0BF8F") (100 . "#E0CF9F") (120 . "#F0DFAF") (140 . "#5F7F5F") (160 . "#7F9F7F") (180 . "#8FB28F") (200 . "#9FC59F") (220 . "#AFD8AF") (240 . "#BFEBBF") (260 . "#93E0E3") (280 . "#6CA0A3") (300 . "#7CB8BB") (320 . "#8CD0D3") (340 . "#94BFF3") (360 . "#DC8CC3"))))
- '(vc-annotate-very-old-color "#DC8CC3"))
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes
+   (quote
+    ("f5eb916f6bd4e743206913e6f28051249de8ccfd070eae47b5bde31ee813d55f" "11636897679ca534f0dec6f5e3cb12f28bf217a527755f6b9e744bd240ed47e1" default)))
+ '(dtrt-indent-mode nil nil (dtrt-indent))
+ '(wakatime-api-key "5fc86bc1-1cbe-4ad0-89fc-3227ceb82a7d")
+ '(wakatime-cli-path "/usr/local/bin/wakatime"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -213,22 +197,22 @@
  )
 
 ;;zenburn
-;;(load-theme 'zenburn t)
+(load-theme 'zenburn t)
 
 ;;eshell
 (global-set-key [f1] 'eshell)
 
-;;rcirc
-(require 'rcirc)
-(setq rcirc-default-nick "asifsk")
-;;(setq rcirc-notify-popup-timeout 30)
-;;(setq rcirc-notify-timeout 10)
-(rcirc-connect "localhost"); 
-;;(require 'rcirc-notify)
-;;(require 'rcirc-alert)
-(require 'rcirc-alertify)
-(rcirc-alertify-enable)
-(setq alert-default-style 'libnotify)
+;; ;;rcirc
+;; (require 'rcirc)
+;; (setq rcirc-default-nick "asifsk")
+;; ;;(setq rcirc-notify-popup-timeout 30)
+;; ;;(setq rcirc-notify-timeout 10)
+;; (rcirc-connect "localhost"); 
+;; ;;(require 'rcirc-notify)
+;; ;;(require 'rcirc-alert)
+;; (require 'rcirc-alertify)
+;; (rcirc-alertify-enable)
+;; (setq alert-default-style 'libnotify)
 
 ;;wanderlust for email
 ;;(autoload 'wl "wl" "Wanderlust" t)
@@ -288,9 +272,6 @@
       'wl-draft-kill
       'mail-send-hook))
 
-;;make indenting use space instead of tabs
-(setq-default indent-tabs-mode nil)
-
 ;;use twitter master password instead of token
 (setq twittering-use-master-password t)
 
@@ -309,9 +290,41 @@ You can redefine this if you want the mouse banished to a different corner."
 (global-set-key (kbd "C-c F") 'remove_blank_lines)
 
 ;;set the indentation correctly
-(require 'web-mode)
-(defun my-web-mode-hook ()
-  "Hooks for Web mode."
-  (setq web-mode-markup-indent-offset 2)
-)
-(add-hook 'web-mode-hook  'my-web-mode-hook)
+;; (require 'web-mode)
+;; (defun my-web-mode-hook ()
+;;   "Hooks for Web mode."
+;;   (setq web-mode-markup-indent-offset 2)
+;; )
+;; (add-hook 'web-mode-hook  'my-web-mode-hook)
+
+;;wakatime
+(global-wakatime-mode t)
+
+;;js2 mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+;; (add-hook 'js2-mode-hook 'ac-js2-mode)
+
+;;(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
+
+;;origami mode for code folding
+(require 'origami)
+(global-set-key (kbd "C-c O") 'origami-mode)
+(global-set-key (kbd "C-c 0") 'origami-close-node)
+(global-set-key (kbd "C-c 1") 'origami-open-node)
+(global-set-key (kbd "C-c -") 'origami-toggle-all-nodes)
+
+;;w3m open links in background
+;;(global-set-key (kbd "C-return") 'w3m-goto-url-new-session)
+
+;;make indenting use space instead of tabs
+(setq-default indent-tabs-mode nil)
+;;(setq js-indent-level 2)
+(setq default-tab-width 2)
+(setq javascript-indent-level 2)
+
+;;dtrt
+(require 'dtrt-indent)
+(dtrt-indent-mode t)
+;;auto indent
+;; (require 'auto-indent-mode)
+;; (auto-indent-global-mode)
